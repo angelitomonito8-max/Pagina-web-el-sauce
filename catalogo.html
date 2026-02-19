@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explora nuestro catálogo de libros: ficción, no ficción y poesía. Descubre autores talentosos publicados por Editorial El Sauce. Compra libros de calidad.">
+    <meta name="keywords"
+        content="catálogo libros, comprar libros, editorial el sauce, libros ficción, libros poesía, libros no ficción, autores españoles, catálogo editorial">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.editorialelsauce.es/catalogo.html">
+    <title>Catálogo de Libros | Editorial El Sauce - Descubre Nuestra Colección</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo_sauce.jpg" alt="El Sauce Editorial" class="logo-img"
+                        style="height: 120px; width: auto; opacity: 1; transition: transform 0.3s ease;">
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Inicio</a>
+                    <a href="catalogo.html" class="active">Catálogo</a>
+                    <a href="publicar.html">Publicar tu Libro</a>
+                    <a href="nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="section-sm"
+        style="background: linear-gradient(135deg, #1A3A0A 0%, #0F2206 100%); color: white; margin-top: 0;">
+        <div class="container text-center">
+            <h1 style="color: white;">Nuestro Catálogo</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">Descubre historias que inspiran, emocionan y transforman</p>
+        </div>
+    </section>
+
+    <!-- CATALOG SECTION -->
+    <section class="section">
+        <div class="container">
+            <!-- SEARCH BAR -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" class="search-input"
+                    placeholder="Buscar por título, autor o palabra clave..." autocomplete="off">
+                <select id="sortSelect" class="form-select" style="width: auto; min-width: 200px;">
+                    <option value="default">Ordenar por...</option>
+                    <option value="title-asc">Título (A-Z)</option>
+                    <option value="title-desc">Título (Z-A)</option>
+
+                    <option value="new">Novedades</option>
+                </select>
+            </div>
+
+
+
+            <!-- RESULTS COUNT -->
+            <p id="resultsCount" class="text-muted mb-md"></p>
+
+            <!-- BOOK GRID -->
+            <div class="grid grid-4" id="bookGrid">
+                <!-- Books will be loaded here by JavaScript -->
+            </div>
+
+            <!-- NO RESULTS MESSAGE -->
+            <div id="noResults" class="text-center" style="display: none; padding: 3rem;">
+                <h3 class="text-muted">No se encontraron libros</h3>
+                <p class="text-muted">Intenta con otros términos de búsqueda o filtros</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Editorial El Sauce</h4>
+                    <p>La editorial para escritores noveles. Impulsando historias desde Navarra.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/el-sauce-editorial" target="_blank" rel="noopener"
+                            class="social-icon" aria-label="LinkedIn"
+                            style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">in</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="publicar.html">Publicar tu Libro</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+                        <li><a href="legal.html#privacidad">Política de Privacidad</a></li>
+                        <li><a href="legal.html#condiciones">Condiciones de Uso</a></li>
+                        <li><a href="legal.html#cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><span class="contact-icon">●</span> Plaza de los Sauce 4</li>
+                        <li>31010 Barañain, Navarra</li>
+                        <li><span class="contact-icon">@</span> <a href="mailto:info@editorialelsauce.com"
+                                style="color: inherit;">info@editorialelsauce.com</a></li>
+                        <li><span class="contact-icon">☎</span> +34 948 984 624</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Editorial El Sauce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Catalog functionality
+        let currentFilter = { category: 'all', genre: null };
+        let currentSort = 'default';
+        let searchTerm = '';
+
+        // Render books
+        function renderBooks() {
+            const grid = document.getElementById('bookGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsCount = document.getElementById('resultsCount');
+
+            // Filter books
+            let filtered = booksData.filter(book => {
+                // Category filter
+                if (currentFilter.category !== 'all' && book.category !== currentFilter.category) {
+                    return false;
+                }
+
+                // New filter
+                if (currentFilter.genre === 'new' && !book.new) {
+                    return false;
+                }
+
+                // Search filter
+                if (searchTerm) {
+                    const search = searchTerm.toLowerCase();
+                    return book.title.toLowerCase().includes(search) ||
+                        book.author.toLowerCase().includes(search) ||
+                        book.description.toLowerCase().includes(search) ||
+                        book.genre.toLowerCase().includes(search);
+                }
+
+                return true;
+            });
+
+            // Sort books
+            if (currentSort === 'title-asc') {
+                filtered.sort((a, b) => a.title.localeCompare(b.title));
+            } else if (currentSort === 'title-desc') {
+                filtered.sort((a, b) => b.title.localeCompare(a.title));
+
+            } else if (currentSort === 'new') {
+                filtered.sort((a, b) => (b.new ? 1 : 0) - (a.new ? 1 : 0));
+            }
+
+            // Update results count
+            resultsCount.textContent = `Mostrando ${filtered.length} ${filtered.length === 1 ? 'libro' : 'libros'}`;
+
+            // Show/hide no results
+            if (filtered.length === 0) {
+                grid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            } else {
+                grid.style.display = 'grid';
+                noResults.style.display = 'none';
+            }
+
+            // Render books
+            grid.innerHTML = filtered.map(book => `
+        <div class="book-card fade-in">
+          <a href="libro.html?id=${book.id}" style="text-decoration: none; color: inherit;">
+            <img src="${book.cover}" alt="${book.title}" class="book-cover">
+          </a>
+          <div class="book-info">
+            <a href="libro.html?id=${book.id}" style="text-decoration: none; color: inherit;">
+              <h3 class="book-title">${book.title}</h3>
+            </a>
+            <p class="book-author">por ${book.author}</p>
+            <p class="book-excerpt">${book.excerpt}</p>
+            ${book.new ? '<span style="display: inline-block; background: #C39A4A; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem;">NOVEDAD</span>' : ''}
+            <div class="book-footer">
+              <a href="libro.html?id=${book.id}" class="btn btn-primary" style="width: 100%; text-align: center;">
+                Ver detalles
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update filter
+                if (btn.dataset.category) {
+                    currentFilter = { category: btn.dataset.category, genre: null };
+                } else if (btn.dataset.genre) {
+                    currentFilter = { category: 'all', genre: btn.dataset.genre };
+                }
+
+                renderBooks();
+            });
+        });
+
+        // Search input
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            renderBooks();
+        });
+
+        // Sort select
+        const sortSelect = document.getElementById('sortSelect');
+        sortSelect.addEventListener('change', (e) => {
+            currentSort = e.target.value;
+            renderBooks();
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBooks();
+        });
+    </script>
+</body>
+
+</html>

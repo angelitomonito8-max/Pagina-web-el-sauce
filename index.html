@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="¿Quieres publicar tu libro? Editorial El Sauce te ayuda a hacer realidad tu obra literaria. Atención personalizada, proceso transparente. ¡Envía tu obra hoy!">
+  <meta name="keywords"
+    content="publicar mi libro, editorial españa, publicar libro, editorial para nuevos autores, servicios editoriales, cómo publicar un libro, editorial navarra, editorial pamplona, enviar obra literaria, publicar novela">
+  <meta name="author" content="Editorial El Sauce">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.editorialelsauce.es/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.editorialelsauce.es/">
+  <meta property="og:title" content="Editorial El Sauce | Publicar Tu Libro en España">
+  <meta property="og:description"
+    content="Editorial innovadora que ayuda a nuevos autores a publicar sus libros. Proceso transparente y atención personalizada.">
+  <meta property="og:image" content="https://www.editorialelsauce.es/assets/images/hero.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.editorialelsauce.es/">
+  <meta property="twitter:title" content="Editorial El Sauce | Publicar Tu Libro en España">
+  <meta property="twitter:description" content="Editorial innovadora que ayuda a nuevos autores a publicar sus libros.">
+  <meta property="twitter:image" content="https://www.editorialelsauce.es/assets/images/hero.png">
+
+  <title>Editorial El Sauce | Publicar Tu Libro en España - Editorial Innovadora</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/enhanced.css">
+</head>
+
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo_sauce.jpg" alt="El Sauce Editorial" class="logo-img"
+            style="height: 120px; width: auto; opacity: 1; transition: transform 0.3s ease;">
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="active">Inicio</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="publicar.html">Publicar tu Libro</a>
+          <a href="nosotros.html">Sobre Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="assets/images/hero.png" alt="Editorial El Sauce - Publicar tu libro en España con editorial innovadora"
+      class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Editorial El Sauce - Publica Tu Libro en España</h1>
+      <p>¿Quieres publicar tu libro? Somos una editorial innovadora que ayuda a nuevos autores a hacer realidad sus
+        obras. Proceso editorial transparente, atención personalizada y pasión por la literatura.</p>
+      <div class="hero-cta">
+        <a href="publicar.html" class="btn btn-primary">Publicar mi Libro</a>
+        <a href="nosotros.html" class="btn btn-primary"
+          style="background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.7); backdrop-filter: blur(4px);">Sobre
+          Nosotros</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR APPROACH SECTION -->
+  <section class="stats-section">
+    <div class="container">
+      <h2 style="color: white; text-align: center; margin-bottom: 3rem; font-size: 2rem;">Nuestra Propuesta</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="feature-icon">N</div>
+          <span class="stat-label">Editorial Innovadora</span>
+        </div>
+        <div class="stat-item">
+          <div class="feature-icon">A</div>
+          <span class="stat-label">Atención Personalizada</span>
+        </div>
+        <div class="stat-item">
+          <div class="feature-icon">M</div>
+          <span class="stat-label">Enfoque Moderno</span>
+        </div>
+        <div class="stat-item">
+          <div class="feature-icon">P</div>
+          <span class="stat-label">Pasión por la Literatura</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED BOOKS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-lg">Libros Destacados</h2>
+      <div class="gold-divider"></div>
+      <div class="grid grid-4" id="featured-books">
+        <!-- Featured books will be loaded here by JavaScript -->
+      </div>
+      <div class="text-center mt-lg">
+        <a href="catalogo.html" class="btn btn-secondary">Ver todo el catálogo</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="section" style="background: linear-gradient(160deg, #EEF3E8 0%, #F8FAF4 100%);">
+    <div class="container">
+      <h2 class="text-center mb-lg">¿Por qué elegir Editorial El Sauce?</h2>
+      <div class="gold-divider"></div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="feature-icon">T</div>
+            <h3 class="text-accent">Tradición Literaria</h3>
+            <p class="card-text">Con raíces en la rica cultura literaria de El Sauce, llevamos décadas impulsando nuevas
+              voces y preservando grandes historias.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="feature-icon">A</div>
+            <h3 class="text-accent">Apoyo Personalizado</h3>
+            <p class="card-text">Cada autor recibe atención individualizada. Te acompañamos en todo el proceso
+              editorial, desde la obra literaria hasta la publicación.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="feature-icon">C</div>
+            <h3 class="text-accent">Calidad Garantizada</h3>
+            <p class="card-text">Cuidamos cada detalle: edición profesional, diseño elegante y distribución efectiva
+              para que tu obra llegue a los lectores.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="section"
+    style="background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); color: white;">
+    <div class="container text-center">
+      <h2 class="mb-md" style="color: white;">¿Tienes una obra lista?</h2>
+      <p
+        style="color: rgba(255,255,255,0.85); margin-bottom: 2rem; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Nos encantaría conocer tu proyecto. Envíanos tu propuesta y nuestro equipo editorial la revisará con atención.
+      </p>
+      <a href="publicar.html" class="btn"
+        style="background: var(--color-gold); color: var(--color-primary-dark); font-weight: 700;">Enviar mi
+        Obra Literaria</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Editorial El Sauce</h4>
+          <p>La editorial para escritores noveles. Impulsando historias desde Navarra.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/el-sauce-editorial" target="_blank" rel="noopener"
+              class="social-icon" aria-label="LinkedIn"
+              style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">in</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="publicar.html">Publicar tu Libro</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+            <li><a href="legal.html#privacidad">Política de Privacidad</a></li>
+            <li><a href="legal.html#condiciones">Condiciones de Uso</a></li>
+            <li><a href="legal.html#cookies">Política de Cookies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul>
+            <li><span class="contact-icon">●</span> Plaza de los Sauce 4</li>
+            <li>31010 Barañain, Navarra</li>
+            <li><span class="contact-icon">@</span> <a href="mailto:info@editorialelsauce.com"
+                style="color: inherit;">info@editorialelsauce.com</a></li>
+            <li><span class="contact-icon">☎</span> +34 948 984 624</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Editorial El Sauce. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Load featured books
+    function loadFeaturedBooks() {
+      const container = document.getElementById('featured-books');
+      const featured = booksData.filter(book => book.featured).slice(0, 4);
+
+      container.innerHTML = featured.map(book => `
+        <div class="book-card fade-in">
+          <img src="${book.cover}" alt="${book.title}" class="book-cover">
+          <div class="book-info">
+            <h3 class="book-title">${book.title}</h3>
+            <p class="book-author">por ${book.author}</p>
+            <p class="book-excerpt">${book.excerpt}</p>
+            <div class="book-footer">
+              <a href="catalogo.html" class="btn btn-primary" style="width: 100%; text-align: center;">
+                Más información
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      loadFeaturedBooks();
+    });
+  </script>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Editorial El Sauce",
+    "alternateName": "El Sauce Editorial",
+    "url": "https://www.editorialelsauce.es",
+    "logo": "https://www.editorialelsauce.es/assets/images/hero.png",
+    "description": "Editorial innovadora dedicada a publicar nuevos autores y literatura de calidad en España",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Mayor, 15",
+      "addressLocality": "Pamplona",
+      "addressRegion": "Navarra",
+      "postalCode": "31001",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+34-948-123-456",
+      "contactType": "customer service",
+      "email": "info@editorialelsauce.es",
+      "availableLanguage": ["Spanish"]
+    },
+    "sameAs": [
+      "https://facebook.com/editorialelsauce",
+      "https://twitter.com/editorialelsauce",
+      "https://instagram.com/editorialelsauce"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Editorial El Sauce",
+    "image": "https://www.editorialelsauce.es/assets/images/hero.png",
+    "@id": "https://www.editorialelsauce.es",
+    "url": "https://www.editorialelsauce.es",
+    "telephone": "+34-948-123-456",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Mayor, 15",
+      "addressLocality": "Pamplona",
+      "addressRegion": "Navarra",
+      "postalCode": "31001",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.8125,
+      "longitude": -1.6458
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
+</body>
+
+</html>

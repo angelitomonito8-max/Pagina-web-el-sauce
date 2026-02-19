@@ -1,0 +1,23 @@
+# Robots.txt for Editorial El Sauce
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.editorialelsauce.es/sitemap.xml
+
+# Block access to scripts and styles (they should still be crawled but not indexed)
+User-agent: *
+Disallow: /js/
+Disallow: /css/
+
+# Allow all other pages
+Allow: /index.html
+Allow: /catalogo.html
+Allow: /publicar.html
+Allow: /nosotros.html
+Allow: /contacto.html
+Allow: /libro.html
+
+# Crawl delay (optional, be polite to search engines)
+Crawl-delay: 1

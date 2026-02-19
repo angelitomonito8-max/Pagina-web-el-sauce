@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contáctanos para publicar tu libro o resolver tus dudas. Editorial El Sauce en Pamplona, Navarra. Email, teléfono y formulario de contacto. Envía tu obra literaria.">
+    <meta name="keywords"
+        content="contacto editorial, enviar obra literaria, editorial pamplona, editorial navarra, consulta editorial, correo editorial, teléfono editorial">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.editorialelsauce.es/contacto.html">
+    <title>Contacto | Editorial El Sauce - Envíanos Tu Manuscrito</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo_sauce.jpg" alt="El Sauce Editorial" class="logo-img"
+                        style="height: 120px; width: auto; opacity: 1; transition: transform 0.3s ease;">
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="publicar.html">Publicar tu Libro</a>
+                    <a href="nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html" class="active">Contacto</a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="section-sm"
+        style="background: linear-gradient(135deg, #1A3A0A 0%, #0F2206 100%); color: white; margin-top: 0;">
+        <div class="container text-center">
+            <h1 style="color: white;">Contacto</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">Estamos aquí para ayudarte. Escríbenos y te responderemos
+                pronto.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="mb-md">Envíanos un Mensaje</h2>
+                    <p class="text-muted mb-lg">
+                        ¿Tienes alguna consulta, sugerencia o quieres más información?
+                        Completa el formulario y nos pondremos en contacto contigo.
+                    </p>
+
+                    <form id="contactForm"
+                        action="https://angelin.app.n8n.cloud/webhook/0ec4baee-1612-4a00-99eb-5a8bf878ba9d"
+                        method="POST" class="card" style="padding: 2rem;">
+                        <div class="form-group">
+                            <label class="form-label">Nombre Completo *</label>
+                            <input type="text" name="nombre" class="form-input" id="contactName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" name="email" class="form-input" id="contactEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" name="telefono" class="form-input" id="contactPhone">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Asunto *</label>
+                            <select name="asunto" class="form-select" id="contactSubject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta-general">Consulta General</option>
+                                <option value="publicar">Información sobre Publicar un Libro</option>
+                                <option value="distribucion">Distribución y Librerías</option>
+                                <option value="prensa">Prensa y Medios</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Mensaje *</label>
+                            <textarea name="mensaje" class="form-textarea" id="contactMessage" rows="6"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group"
+                            style="display: flex; align-items: flex-start; gap: 0.75rem; margin-top: 1rem;">
+                            <input type="checkbox" id="privacyPolicy" name="privacidad" required
+                                style="width: auto; margin-top: 0.3rem;">
+                            <label for="privacyPolicy" class="text-muted" style="font-size: 0.9rem; line-height: 1.5;">
+                                He leído y acepto la <a href="legal.html#privacidad"
+                                    style="color: var(--color-primary); text-decoration: underline;">política de
+                                    privacidad</a> *
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="mb-md">Información de Contacto</h2>
+
+                    <div class="card mb-md">
+                        <div class="card-body">
+                            <h3 class="text-accent" style="font-size: 1.3rem; margin-bottom: 1.5rem;">Ubicación</h3>
+                            <p style="line-height: 1.8; font-size: 1.05rem;">
+                                <strong>Editorial El Sauce</strong><br>
+                                Plaza de los Sauce 4<br>
+                                31010 Barañain, Navarra<br>
+                                España
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-md">
+                        <div class="card-body">
+                            <h3 class="text-accent" style="font-size: 1.3rem; margin-bottom: 1.5rem;"><span
+                                    class="contact-icon">@</span> Contacto
+                                Directo</h3>
+                            <p style="line-height: 1.8; font-size: 1.05rem;">
+                                <strong>Email:</strong><br>
+                                <a href="mailto:info@editorialelsauce.com"
+                                    style="color: var(--color-primary); text-decoration: underline;">info@editorialelsauce.com</a><br><br>
+
+                                <strong>Teléfono:</strong><br>
+                                <a href="tel:+34948984624"
+                                    style="color: var(--color-primary); text-decoration: underline;">+34 948 984
+                                    624</a><br><br>
+
+                                <strong>Horario de Atención:</strong><br>
+                                Lunes a Viernes: 9:00 - 18:00<br>
+                                Sábados: 10:00 - 14:00
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-accent" style="font-size: 1.3rem; margin-bottom: 1.5rem;">🌐 Redes Sociales
+                            </h3>
+                            <p class="text-muted mb-md">Síguenos en nuestras redes sociales para estar al día de
+                                novedades, eventos y lanzamientos.</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/company/el-sauce-editorial" target="_blank"
+                                    rel="noopener" class="social-icon" aria-label="LinkedIn" title="LinkedIn"
+                                    style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" style="background: linear-gradient(135deg, #F5F3EF 0%, #FFFFFF 100%);">
+        <div class="container">
+            <h2 class="text-center mb-lg">Preguntas Frecuentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card mb-md">
+                    <div class="card-body">
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.75rem;">¿Cómo puedo publicar mi libro
+                            con Editorial El Sauce?</h3>
+                        <p class="text-muted">
+                            Visita nuestra página <a href="publicar.html"
+                                style="color: var(--color-primary); text-decoration: underline;">Publicar tu Libro</a>
+                            donde encontrarás toda la información sobre el proceso editorial y un formulario para enviar
+                            tu propuesta literaria.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mb-md">
+                    <div class="card-body">
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.75rem;">¿Cuánto tarda la evaluación de
+                            una obra literaria?</h3>
+                        <p class="text-muted">
+                            Nuestro equipo editorial revisa cada propuesta con atención. El proceso de evaluación suele
+                            tardar entre 4 y 6 semanas.
+                            Te contactaremos por email para comunicarte nuestra decisión.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3 style="color: var(--color-primary); margin-bottom: 0.75rem;">¿Puedo visitar vuestras
+                            oficinas?</h3>
+                        <p class="text-muted">
+                            Sí, nos encantaría conocerte en persona. Nuestras oficinas están ubicadas en Barañain,
+                            Navarra.
+
+                            Te recomendamos que reserves cita previa llamándonos o enviándonos un email para asegurarnos
+                            de poder atenderte adecuadamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Editorial El Sauce</h4>
+                    <p>La editorial para escritores noveles. Impulsando historias desde Navarra.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/el-sauce-editorial" target="_blank" rel="noopener"
+                            class="social-icon" aria-label="LinkedIn"
+                            style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">in</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="publicar.html">Publicar tu Libro</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+                        <li><a href="legal.html#privacidad">Política de Privacidad</a></li>
+                        <li><a href="legal.html#condiciones">Condiciones de Uso</a></li>
+                        <li><a href="legal.html#cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><span class="contact-icon">●</span> Plaza de los Sauce 4</li>
+                        <li>31010 Barañain, Navarra</li>
+                        <li><span class="contact-icon">@</span> <a href="mailto:info@editorialelsauce.com"
+                                style="color: inherit;">info@editorialelsauce.com</a></li>
+                        <li><span class="contact-icon">☎</span> +34 948 984 624</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Editorial El Sauce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: JSON.stringify(Object.fromEntries(formData)),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert(`¡Gracias! Hemos recibido tu mensaje con éxito. Nos pondremos en contacto contigo lo antes posible.`);
+                    contactForm.reset();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    alert('Lo sentimos, ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo o escríbenos a info@editorialelsauce.com');
+                }
+            } catch (error) {
+                alert('Ha ocurrido un error de conexión. Por favor, comprueba tu internet e inténtalo de nuevo.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        });
+
+        // Make layout responsive
+        function adjustLayout() {
+            const contactSection = document.querySelector('.section .container > div');
+            if (window.innerWidth <= 768) {
+                contactSection.style.gridTemplateColumns = '1fr';
+                contactSection.style.gap = '2rem';
+            } else {
+                contactSection.style.gridTemplateColumns = '1fr 1fr';
+                contactSection.style.gap = '4rem';
+            }
+        }
+
+        window.addEventListener('resize', adjustLayout);
+        document.addEventListener('DOMContentLoaded', adjustLayout);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalles del libro - Editorial El Sauce">
+    <title>Libro - Editorial El Sauce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+    <style>
+        .book-detail-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .book-detail-cover {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
+        }
+
+        .book-detail-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-detail-author {
+            font-size: 1.3rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+
+        .book-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .book-meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-meta-label {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .book-meta-value {
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .book-description {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .book-detail-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .book-detail-cover {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo_sauce.jpg" alt="El Sauce Editorial" class="logo-img"
+                        style="height: 120px; width: auto; opacity: 1; transition: transform 0.3s ease;">
+                </a>
+
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html">Inicio</a>
+                    <a href="catalogo.html">Catálogo</a>
+                    <a href="publicar.html">Publicar tu Libro</a>
+                    <a href="nosotros.html">Sobre Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BOOK DETAIL SECTION -->
+    <section class="section">
+        <div class="container">
+            <a href="catalogo.html"
+                style="display: inline-block; margin-bottom: 2rem; color: var(--color-primary); font-weight: 600;">
+                ← Volver al catálogo
+            </a>
+
+            <div class="book-detail-container" id="bookDetail">
+                <!-- Book details will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Related Books -->
+            <div id="relatedBooks">
+                <h2 class="mb-lg">También te puede interesar</h2>
+                <div class="grid grid-4" id="relatedBooksGrid">
+                    <!-- Related books will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Editorial El Sauce</h4>
+                    <p>La editorial para escritores noveles. Impulsando historias desde Navarra.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/el-sauce-editorial" target="_blank" rel="noopener"
+                            class="social-icon" aria-label="LinkedIn"
+                            style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">in</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="publicar.html">Publicar tu Libro</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="legal.html#aviso-legal">Aviso Legal</a></li>
+                        <li><a href="legal.html#privacidad">Política de Privacidad</a></li>
+                        <li><a href="legal.html#condiciones">Condiciones de Uso</a></li>
+                        <li><a href="legal.html#cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><span class="contact-icon">●</span> Plaza de los Sauce 4</li>
+                        <li>31010 Barañain, Navarra</li>
+                        <li><span class="contact-icon">@</span> <a href="mailto:info@editorialelsauce.com"
+                                style="color: inherit;">info@editorialelsauce.com</a></li>
+                        <li><span class="contact-icon">☎</span> +34 948 984 624</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Editorial El Sauce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/data.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Get book ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookId = parseInt(urlParams.get('id'));
+
+        // Load book details
+        function loadBookDetails() {
+            const book = booksData.find(b => b.id === bookId);
+
+            if (!book) {
+                document.getElementById('bookDetail').innerHTML = `
+          <div style="text-align: center; padding: 3rem;">
+            <h2>Libro no encontrado</h2>
+            <p class="text-muted mb-lg">El libro que buscas no existe o ha sido eliminado.</p>
+            <a href="catalogo.html" class="btn btn-primary">Volver al catálogo</a>
+          </div>
+        `;
+                document.getElementById('relatedBooks').style.display = 'none';
+                return;
+            }
+
+            document.title = `${book.title} - Editorial El Sauce`;
+
+            document.getElementById('bookDetail').innerHTML = `
+        <div>
+          <img src="${book.cover}" alt="${book.title}" class="book-detail-cover">
+        </div>
+        <div class="book-detail-info">
+          <h1>${book.title}</h1>
+          <p class="book-detail-author">por ${book.author}</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="contacto.html" class="btn btn-primary">Solicitar más información</a>
+            <a href="catalogo.html" class="btn btn-outline">Ver más libros</a>
+          </div>
+        </div>
+      `;
+
+            // Load related books (same category, excluding current)
+            loadRelatedBooks(book);
+        }
+
+        function loadRelatedBooks(currentBook) {
+            const related = booksData
+                .filter(b => b.id !== currentBook.id && (b.category === currentBook.category || b.genre === currentBook.genre))
+                .slice(0, 4);
+
+            if (related.length === 0) {
+                document.getElementById('relatedBooks').style.display = 'none';
+                return;
+            }
+
+            document.getElementById('relatedBooksGrid').innerHTML = related.map(book => `
+        <div class="book-card fade-in">
+          <a href="libro.html?id=${book.id}" style="text-decoration: none; color: inherit;">
+            <img src="${book.cover}" alt="${book.title}" class="book-cover">
+          </a>
+          <div class="book-info">
+            <a href="libro.html?id=${book.id}" style="text-decoration: none; color: inherit;">
+              <h3 class="book-title">${book.title}</h3>
+            </a>
+            <p class="book-author">por ${book.author}</p>
+            <p class="book-excerpt">${book.excerpt}</p>
+            <div class="book-footer">
+              <a href="libro.html?id=${book.id}" class="btn btn-primary" style="width: 100%; text-align: center;">
+                Ver detalles
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadBookDetails();
+        });
+    </script>
+</body>
+
+</html>
