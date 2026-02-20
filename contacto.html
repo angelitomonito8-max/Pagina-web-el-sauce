@@ -54,71 +54,9 @@
     <!-- CONTACT SECTION -->
     <section class="section">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
-                <!-- Contact Form -->
-                <div>
-                    <h2 class="mb-md">Envíanos un Mensaje</h2>
-                    <p class="text-muted mb-lg">
-                        ¿Tienes alguna consulta, sugerencia o quieres más información?
-                        Completa el formulario y nos pondremos en contacto contigo.
-                    </p>
-
-                    <form id="contactForm"
-                        action="https://angelin.app.n8n.cloud/webhook/0ec4baee-1612-4a00-99eb-5a8bf878ba9d"
-                        method="POST" class="card" style="padding: 2rem;">
-                        <div class="form-group">
-                            <label class="form-label">Nombre Completo *</label>
-                            <input type="text" name="nombre" class="form-input" id="contactName" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Email *</label>
-                            <input type="email" name="email" class="form-input" id="contactEmail" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Teléfono</label>
-                            <input type="tel" name="telefono" class="form-input" id="contactPhone">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Asunto *</label>
-                            <select name="asunto" class="form-select" id="contactSubject" required>
-                                <option value="">Selecciona un asunto</option>
-                                <option value="consulta-general">Consulta General</option>
-                                <option value="publicar">Información sobre Publicar un Libro</option>
-                                <option value="distribucion">Distribución y Librerías</option>
-                                <option value="prensa">Prensa y Medios</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Mensaje *</label>
-                            <textarea name="mensaje" class="form-textarea" id="contactMessage" rows="6"
-                                required></textarea>
-                        </div>
-
-                        <div class="form-group"
-                            style="display: flex; align-items: flex-start; gap: 0.75rem; margin-top: 1rem;">
-                            <input type="checkbox" id="privacyPolicy" name="privacidad" required
-                                style="width: auto; margin-top: 0.3rem;">
-                            <label for="privacyPolicy" class="text-muted" style="font-size: 0.9rem; line-height: 1.5;">
-                                He leído y acepto la <a href="legal.html#privacidad"
-                                    style="color: var(--color-primary); text-decoration: underline;">política de
-                                    privacidad</a> *
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
-                            Enviar Mensaje
-                        </button>
-                    </form>
-                </div>
-
                 <!-- Contact Info -->
-                <div>
-                    <h2 class="mb-md">Información de Contacto</h2>
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <h2 class="text-center mb-md">Información de Contacto</h2>
 
                     <div class="card mb-md">
                         <div class="card-body">
@@ -284,57 +222,9 @@
             navLinks.classList.toggle('active');
         });
 
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.textContent;
 
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Enviando...';
 
-            const formData = new FormData(contactForm);
 
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: contactForm.method,
-                    body: JSON.stringify(Object.fromEntries(formData)),
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    alert(`¡Gracias! Hemos recibido tu mensaje con éxito. Nos pondremos en contacto contigo lo antes posible.`);
-                    contactForm.reset();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    alert('Lo sentimos, ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo o escríbenos a info@editorialelsauce.com');
-                }
-            } catch (error) {
-                alert('Ha ocurrido un error de conexión. Por favor, comprueba tu internet e inténtalo de nuevo.');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalBtnText;
-            }
-        });
-
-        // Make layout responsive
-        function adjustLayout() {
-            const contactSection = document.querySelector('.section .container > div');
-            if (window.innerWidth <= 768) {
-                contactSection.style.gridTemplateColumns = '1fr';
-                contactSection.style.gap = '2rem';
-            } else {
-                contactSection.style.gridTemplateColumns = '1fr 1fr';
-                contactSection.style.gap = '4rem';
-            }
-        }
-
-        window.addEventListener('resize', adjustLayout);
-        document.addEventListener('DOMContentLoaded', adjustLayout);
     </script>
 </body>
 
